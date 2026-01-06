@@ -1,3 +1,4 @@
+"use client";
 import Image from "../Core/Image"
 import { cn } from "@/utils/cn"
 import { Each } from "../Core/Each"

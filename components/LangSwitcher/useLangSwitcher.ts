@@ -1,13 +1,14 @@
 
+import { usePathname, useRouter } from "@/navigation"
+import { useLocale, useTranslations } from "next-intl"
 import { useEffect, useRef, useState } from "react"
 import { ILanguage, TLang } from "./types"
-import { useLocale, useTranslations } from "next-intl"
-import { useRouter } from "next/navigation"
 
 export const useLangSwitcher = () => {
   const [toggle, setToggle] = useState<boolean>(false)
   const switcher_ref = useRef<HTMLDivElement | null>(null)
   const router = useRouter()
+  const pathname = usePathname()
   const t = useTranslations()
   const locale = useLocale()
   const languages: ILanguage[] = [
@@ -30,9 +31,8 @@ export const useLangSwitcher = () => {
       document.removeEventListener('click', handleClickOutside);
     };
   }, [switcher_ref]);
-  const onSwitchLang = (locale: TLang) => {
-    // window.location.reload()
-    router.replace(`/${locale}`)
+  const onSwitchLang = (newLocale: TLang) => {
+    router.replace(pathname, { locale: newLocale })
   }
   return {
     locale,

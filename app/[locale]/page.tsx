@@ -1,23 +1,21 @@
-"use client";
-import { getTranslations } from "next-intl/server";
-import Link from "next/link";
-import React, { useEffect } from "react";
-import HeroSection from "@/components/Sections/heroSection";
-import StatisticSection from "@/components/Sections/statisticSection";
-import HowWorkSection from "@/components/Sections/howWorkSection";
-import StudentsReviewsSection from "@/components/Sections/studentsReviewsSection";
-import PackageSection from "@/components/Sections/packageSection";
-import BecomeTeacherSection from "@/components/Sections/becomeTeacherSection";
-import ContactSection from "@/components/Sections/contactSection/index";
-import "aos/dist/aos.css";
-import AOS from "aos";
+'use client';
+import BecomeTeacherSection from '@/components/Sections/becomeTeacherSection';
+import ContactSection from '@/components/Sections/contactSection/index';
+import HeroSection from '@/components/Sections/heroSection';
+import HowWorkSection from '@/components/Sections/howWorkSection';
+import PackageSection from '@/components/Sections/packageSection';
+import StatisticSection from '@/components/Sections/statisticSection';
+import StudentsReviewsSection from '@/components/Sections/studentsReviewsSection';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
-export default function HomePage({locale}:{locale:string}) {
+export default function HomePage() {
   useEffect(() => {
     AOS.refresh();
     AOS.init({
       duration: 500,
-      easing: "ease-in-out",
+      easing: 'ease-in-out',
       offset: 100,
     });
   }, []);

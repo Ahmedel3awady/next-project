@@ -1,13 +1,13 @@
-import { useTranslations } from "next-intl";
-import HeadSection from "../Core/HeadSection";
-import { Each } from "../Core/Each";
-import Image from "@/components/Core/Image";
-import CountUp from "../Core/CountUp";
-import Link from "next/link";
+import Image from '@/components/Core/Image';
+import { Link } from '@/navigation';
+import { useTranslations } from 'next-intl';
+import CountUp from '../Core/CountUp';
+import { Each } from '../Core/Each';
+import HeadSection from '../Core/HeadSection';
 
 export default function BecomeTeacherSection() {
   const t = useTranslations();
-  
+
   const data: {
     id: number;
     icon: string;
@@ -16,27 +16,27 @@ export default function BecomeTeacherSection() {
   }[] = [
     {
       id: 1,
-      icon: "users.svg",
-      title: t("titles.become_feature_1"),
-      description: t("descriptions.become_feature_1"),
+      icon: 'users.svg',
+      title: t('titles.become_feature_1'),
+      description: t('descriptions.become_feature_1'),
     },
     {
       id: 2,
-      icon: "clock.svg",
-      title: t("titles.become_feature_2"),
-      description: t("descriptions.become_feature_2"),
+      icon: 'clock.svg',
+      title: t('titles.become_feature_2'),
+      description: t('descriptions.become_feature_2'),
     },
     {
       id: 3,
-      icon: "dollar.svg",
-      title: t("titles.become_feature_3"),
-      description: t("descriptions.become_feature_3"),
+      icon: 'dollar.svg',
+      title: t('titles.become_feature_3'),
+      description: t('descriptions.become_feature_3'),
     },
     {
       id: 4,
-      icon: "support.svg",
-      title: t("titles.become_feature_4"),
-      description: t("descriptions.become_feature_4"),
+      icon: 'support.svg',
+      title: t('titles.become_feature_4'),
+      description: t('descriptions.become_feature_4'),
     },
   ];
   const basicRequirementsData: {
@@ -45,51 +45,43 @@ export default function BecomeTeacherSection() {
   }[] = [
     {
       id: 1,
-      description: t("descriptions.basic_requirements_description_1"),
+      description: t('descriptions.basic_requirements_description_1'),
     },
     {
       id: 2,
-      description: t("descriptions.basic_requirements_description_2"),
+      description: t('descriptions.basic_requirements_description_2'),
     },
     {
       id: 3,
-      description: t("descriptions.basic_requirements_description_3"),
+      description: t('descriptions.basic_requirements_description_3'),
     },
     {
       id: 4,
-      description: t("descriptions.basic_requirements_description_4"),
+      description: t('descriptions.basic_requirements_description_4'),
     },
   ];
   return (
-    <section
-      className={`become-teacher-section w-full rounded-lg shadow-3xl lg:py-16 py-10`}
-    >
+    <section className={`become-teacher-section w-full rounded-lg shadow-3xl lg:py-16 py-10`}>
       <div className="container grid lg:grid-cols-2 grid-cols-1 gap-10 items-center">
         <div>
           <HeadSection
-            title={t("titles.become_a_tutor")}
-            description={t("descriptions.become_a_tutor_description")}
+            title={t('titles.become_a_tutor')}
+            description={t('descriptions.become_a_tutor_description')}
             className="!items-start !text-start"
           />
           <div className="become-teacher-features grid lg:grid-cols-2 grid-cols-1 gap-6">
             <Each
               of={data}
-              render={(item) => (
+              render={item => (
                 <div
                   className="become-teacher-feature flex items-start gap-3"
                   data-aos="fade-up"
                   data-aos-delay="100"
                 >
-                  <Image
-                    src={`/images/icons/${item.icon}`}
-                    alt={item.title}
-                    className="w-7 h-7"
-                  />
+                  <Image src={`/images/icons/${item.icon}`} alt={item.title} className="w-7 h-7" />
                   <h3 className="text-gray2 text-base font-normal flex flex-col gap-1">
                     {item.title}
-                    <span className="text-gray2 text-xs font-normal">
-                      {item.description}
-                    </span>
+                    <span className="text-gray2 text-xs font-normal">{item.description}</span>
                   </h3>
                 </div>
               )}
@@ -100,28 +92,23 @@ export default function BecomeTeacherSection() {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <h3 className="text-dark text-2xl font-bold mb-5">
-              {t("titles.basic_requirements")}
-            </h3>
+            <h3 className="text-dark text-2xl font-bold mb-5">{t('titles.basic_requirements')}</h3>
             <ul>
               <Each
                 of={basicRequirementsData}
-                render={(item) => (
-                  <li className="text-gray2 text-xs font-normal">
-                    {item.description}
-                  </li>
+                render={item => (
+                  <li className="text-gray2 text-xs font-normal">{item.description}</li>
                 )}
               />
             </ul>
           </div>
           <Link
-            href={`/become-a-teacher`}
+            href="/become-a-teacher"
             className="btn default-btn min-w-[200px]"
             data-aos="fade-up"
             data-aos-delay="100"
-            locale="en"
           >
-            {t("buttons.apply_now")}
+            {t('buttons.apply_now')}
           </Link>
         </div>
         <div
@@ -143,7 +130,7 @@ export default function BecomeTeacherSection() {
               className="!text-primary text-4xl font-bold !justify-start !mb-0"
             />
             <span className="text-gray2 text-sm font-normal">
-              {t("titles.professional_tutors")}
+              {t('titles.professional_tutors')}
             </span>
           </div>
         </div>

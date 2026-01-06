@@ -1,4 +1,4 @@
-import { ReactNode, useEffect } from "react";
+import { ReactNode } from "react";
 import "../globals.css";
 import "../globals";
 import NavBar from "@/components/NavBar";
@@ -34,7 +34,7 @@ export default function RootLayout({ children, params: { locale } }: IProps) {
 
   return (
     <html lang={locale} dir={dir} suppressHydrationWarning>
-      <body>
+      <body suppressHydrationWarning>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ReactQueryProvider>
             <NavBar />

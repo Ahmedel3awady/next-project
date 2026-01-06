@@ -1,8 +1,5 @@
 {
-  "cSpell.words": [
-    "Toastify"
-  ],
-  "i18n-ally.localesPaths": [
-    "lang"
-  ]
+  "cSpell.words": ["Toastify"],
+  "i18n-ally.localesPaths": ["lang"],
+  "i18next.i18nPaths": "/Users/fintech/Documents/projects/next-project/lang"
 }
