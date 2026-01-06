@@ -1,0 +1,82 @@
+.btn {
+    @apply overflow-hidden isolate relative transition-all duration-500 border border-transparent hover:shadow-lg flex items-center justify-center w-fit h-[56px] gap-3 py-2 px-6 rounded-[8px];
+}
+
+.btn.default-btn {
+    @apply text-light hover:text-primary border-primary;
+}
+
+.btn.default-btn:hover .btn-icon{
+    filter: var(--primary-filter);
+}
+.btn.default-btn::before,
+.btn.default-btn::after {
+    content: '';
+    @apply absolute w-full h-full bg-primary z-[-1] transition-all duration-500 isolation-auto left-0 right-0;
+}
+
+.btn.default-btn::before {
+    @apply top-0 hover:-top-full;
+}
+
+.btn.default-btn::after {
+    @apply bottom-0 hover:-bottom-full;
+
+}
+
+.btn.light-default-btn {
+    @apply text-primary hover:text-light border-light;
+}
+
+.btn.light-default-btn::before,
+.btn.light-default-btn::after {
+    content: '';
+    @apply absolute w-full h-full bg-light z-[-1] transition-all duration-500 isolation-auto left-0 right-0;
+}
+
+.btn.light-default-btn::before {
+    @apply top-0 hover:-top-full;
+}
+
+.btn.light-default-btn::after {
+    @apply bottom-0 hover:-bottom-full;
+
+}
+
+.btn.default-btn:hover .image-icon {
+    filter: var(--primary-filter);
+}
+
+.btn.default-btn:hover .small-icon {
+    filter: none;
+}
+
+.btn.default-btn .small-icon {
+    filter: var(--light-filter);
+}
+
+
+.btn.light-btn {
+    @apply text-primary hover:text-light border-light;
+}
+
+.btn.light-btn::before,
+.btn.light-btn::after {
+    content: '';
+    @apply absolute w-full h-full bg-light z-[-1] transition-all duration-500 isolation-auto left-0 right-0;
+}
+
+.btn.light-btn::before {
+    @apply !bg-primaryLight -top-full hover:top-0;
+}
+
+.btn.light-btn::after {
+    @apply !bg-primaryLight -bottom-full hover:bottom-0;
+
+}
+
+.btn.arrows-btn {
+    box-shadow: 0px 3.16px 4.75px -3.16px #0000001A;
+    box-shadow: 0px 7.91px 11.87px -2.37px #0000001A;
+
+}

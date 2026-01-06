@@ -1,0 +1,259 @@
+.hero-section {
+    background: linear-gradient(106.63deg, #FFF8EF -10.5%, #FFFFFF 94.72%);
+}
+
+.hero-section .hero-section-content {}
+
+.hero-section .hero-section-content .span-chip {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    padding: .5rem 1rem;
+    border-radius: 24px;
+    width: max-content;
+    background: linear-gradient(89.25deg, rgba(13, 148, 136, 0.1) 0.38%, rgba(16, 177, 161, 0.1) 104.37%);
+
+}
+
+.hero-section .hero-section-content .span-chip::before {
+    content: '';
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background: var(--primary);
+}
+
+.hero-section .hero-section-slider {
+    background: url('/images/hero/hero-slider-shap.webp') no-repeat center center;
+
+}
+
+/* .hero-section .hero-section-slider .custom-hero-section-slider .swiper {
+    width: 320px;
+    height: 540px;
+    margin: 0 auto;
+    background: url('/images/hero/mockup.webp') no-repeat center center/ 320px 540px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-section .hero-section-slider .custom-hero-section-slider .swiper .swiper-slide .swiper-slide-image {
+    width: 240px !important;
+    height: 466px;
+    margin-inline: auto;
+    margin-top: 18px;
+    border-radius: 30px;
+} */
+
+.hero-section .hero-section-slider .custom-hero-section-slider .swiper {
+    width: 270px;
+    height: 530px;
+    margin: 0 auto;
+    background: url('/images/hero/mockup.webp') no-repeat center center/ 270px 530px;
+    overflow: hidden;
+    position: relative;
+    /* box-shadow: 0px 19.78px 39.56px -9.49px #00000040; */
+    /* border-radius: 44.3px; */
+}
+
+.hero-section .hero-section-slider .custom-hero-section-slider .swiper .swiper-slide .swiper-slide-image {
+    width: 250px !important;
+    height: 515px;
+    margin-inline: auto;
+    margin-top: 7.5px;
+    border-radius: 38px;
+}
+
+
+.hero-section .hero-section-slider .custom-hero-section-slider .swiper:before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 2;
+    width: 100px;
+    height: 20px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: #101828;
+
+}
+
+.hero-section .hero-section-slider .custom-hero-section-slider .swiper .swiper-slide {
+    opacity: 0 !important;
+    transition: opacity 1s ease-in-out !important;
+}
+
+.hero-section .hero-section-slider .custom-hero-section-slider .swiper .swiper-slide {
+    transition: all 0.3s ease-in-out !important;
+}
+
+.hero-section .hero-section-slider .custom-hero-section-slider .swiper .swiper-slide-active {
+    opacity: 1 !important;
+    box-shadow: 0px 3.3px 4.95px -3.3px #0000001A;
+
+    box-shadow: 0px 8.25px 12.38px -2.48px #0000001A;
+
+}
+
+.how-work-section .custom-swiper-thumbs .swiper-slide-thumb-active .how-work-card {
+    background: var(--primary) !important;
+
+}
+
+.how-work-section .custom-swiper-thumbs .swiper-slide-thumb-active .how-work-card .how-work-card-content-icon img {
+    filter: var(--light-filter) !important;
+}
+
+.how-work-section .custom-swiper-thumbs .swiper-slide-thumb-active .how-work-card .how-work-card-content-title h3 {
+    color: #FFFFFF !important;
+}
+
+.how-work-big-card {
+    background: linear-gradient(180deg, #FFF8F0 0%, #FFFFFF 100%);
+    box-shadow: 0px 3.3px 4.95px -3.3px #958D8229;
+    box-shadow: 0px 8.25px 12.38px -2.48px #86786529;
+
+}
+
+.how-work-big-card .how-work-big-card-content-image {
+    background: url('/images/general/how_work_shape.svg') no-repeat center bottom;
+}
+
+.swiper-pagination {
+    position: relative !important;
+    inset: 0 !important;
+    justify-content: center !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    width: 100% !important;
+    margin-top: 2rem !important;
+    transform: none !important;
+}
+
+.swiper-pagination span {
+    position: static !important;
+    inset: 0 !important;
+    width: 50px !important;
+    background-color: #D1D5DC;
+    border-radius: 5px !important;
+    transform: none !important;
+    opacity: 1 !important;
+}
+
+.swiper-pagination span.swiper-pagination-bullet-active {
+    background-color: var(--primary) !important;
+}
+
+.students-reviews-section,
+.package-section {
+    background: linear-gradient(180deg, #FFFFFF 0%, #FFF8F0 100%);
+
+}
+
+.review-card {
+    background: #FFFFFF;
+    box-shadow: 0px 3.3px 4.95px -3.3px #958D8229;
+    box-shadow: 0px 8.25px 12.38px -2.48px #86786529;
+}
+
+.review-card:before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 40px;
+    height: 40px;
+    background-image: url('/images/icons/quotes.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40px 40px;
+    animation: animation_up_and_down 16s ease 0s infinite normal none;
+
+}
+
+.review-card .review-card-content {}
+
+.package-card {
+    box-shadow: 0px 3.3px 4.95px -3.3px #958D8229;
+    box-shadow: 0px 8.25px 12.38px -2.48px #86786529;
+}
+
+.image-container-become-teacher {
+    position: relative;
+}
+
+.image-container-become-teacher .image-become-teacher {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 20.63px 41.26px -9.9px #00000040;
+    border-radius: 20px;
+
+}
+
+.image-container-become-teacher .image-become-teacher:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -19rem;
+    width: 100%;
+    height: 100%;
+    background: url('/images/icons/big_victor.svg') no-repeat center center;
+    background-size: 100% 100%;
+    z-index: 1;
+    animation: animation_left_and_right 16s ease 0s infinite normal none;
+}
+
+.image-container-become-teacher .image-become-teacher img {}
+
+.become-teacher-basic-requirements ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.become-teacher-basic-requirements li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #364153;
+    font-size: 14px;
+}
+
+.become-teacher-basic-requirements li:before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    background: var(--primary);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.contact-info {
+    background: linear-gradient(180deg, #0D9488 0%, #0A7A70 100%);
+}
+
+.contact-info:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -10rem;
+    width: 100%;
+    height: 100%;
+    background: url('/images/icons/big_victor_light.svg') no-repeat center bottom -2rem;
+    background-size: 100% 100%;
+    z-index: 1;
+    animation: animation_left_and_right 16s ease 0s infinite normal none;
+    z-index: -1;
+    isolation: auto;
+}
+
+.contact-section {
+    background: linear-gradient(180deg, #FFFFFF 0%, #F0FDFA 100%);
+
+}

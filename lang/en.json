@@ -1,0 +1,47 @@
+{
+  "validations": {
+    "required": "This field is required",
+    "email": "Invalid Email Pls add correct one",
+    "invalid_file": "Invalid File pls add correct one "
+  },
+  "navbar": {
+    "home": "home",
+    "users": "users",
+    "products": "products",
+    "roles": "Roles"
+  },
+  "languages": {
+    "ar": "Arabic",
+    "en": "English"
+  },
+  "heading": {},
+  "button": {
+    "login": "Login",
+    "add": "Add",
+    "save": "Save"
+  },
+  "label": {
+    "first_name": "First Name ",
+    "last_name": "Last Name ",
+    "email": "Email  ",
+    "password": "Password ",
+    "role_id": "Role",
+    "image":"Image"
+  },
+  "footer": {
+    "all_rights": "All rights reserved to the company"
+  },
+  "table": {
+    "id": "id",
+    "name": "name",
+    "actions": "actions",
+    "no_results": "No Results",
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "email": "Email",
+    "role": "role",
+    "product_name": "product name",
+    "price": "price",
+    "image": "image"
+  }
+}

@@ -1,0 +1,173 @@
+@import "@fortawesome/fontawesome-free/css/all.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #0D9488;
+  --primaryLight: #F0FDFA;
+  --secondary: '#022F2B';
+  --light: '#fff';
+  --dark: '#2C2C2C';
+  --gray: '#8A8A8A';
+  --gray2: '#4A5565';
+  --dark-gray: '#2B374D';
+  --light-gray: '#FBFBFB';
+  --gray-400: '#AFADB5';
+  --light-gray-200: '#EAEAEAEA';
+  --light-gray-400: '#4A99D366';
+  --primary-filter: brightness(0) saturate(100%) invert(41%) sepia(64%) saturate(553%) hue-rotate(125deg) brightness(99%) contrast(94%);
+  --light-filter: brightness(0) saturate(100%) invert(99%) sepia(4%) saturate(82%) hue-rotate(102deg) brightness(115%) contrast(100%);
+
+}
+
+.light-filter {
+  filter: var(--light-filter);
+}
+
+.main-shadow {
+  box-shadow: 0px 6.6px 8.25px -4.95px #0000001A;
+  box-shadow: 0px 16.51px 20.63px -4.13px #0000001A;
+
+}
+
+* {
+  font-family: "Poppins";
+  scroll-padding-top: 150px !important;
+  scroll-behavior: smooth;
+}
+
+textarea {
+  resize: none !important;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  border-radius: 20px;
+  scrollbar-width: 0;
+}
+
+@layer components {
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-[20px];
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-primary/25 rounded-lg;
+  }
+
+  .active {
+    @apply bg-primary/20 text-primary;
+  }
+
+  td,
+  th {
+    @apply whitespace-nowrap;
+  }
+
+  .active-page {
+    @apply bg-primary text-white transition-all duration-300 !important;
+  }
+}
+
+
+.animation_up_and_down {
+  animation: animation_up_and_down 12s ease 0s infinite normal none;
+}
+
+.animation_left_and_right {
+  animation: animation_left_and_right 12s ease 0s infinite normal none;
+}
+
+/* Copy this code after the above code */
+@keyframes animation_up_and_down {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateY(-8px);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: translateY(8px);
+  }
+
+  80% {
+    transform: translateY(6.4px);
+  }
+
+  90% {
+    transform: translateY(-6.4px);
+  }
+}
+
+@keyframes animation_left_and_right {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateX(-8px);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: translateX(8px);
+  }
+
+  80% {
+    transform: translateX(6.4px);
+  }
+
+  90% {
+    transform: translateX(-6.4px);
+  }
+}
+
+.bg-primary-gradient {
+  background: linear-gradient(180deg, #0D9488 0%, #0A7A70 100%);
+}
+
+body {
+  overflow-x: hidden;
+}
+
+section {
+  overflow: hidden;
+}
+
+
+.core-lazy-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* fade + blur animation */
+.fade-blur {
+  opacity: 0;
+  filter: blur(40px);
+  transform: scale(0.95);
+  transition: opacity 0.7s ease, filter 0.7s ease, transform 0.7s ease;
+}
+
+.fade-blur-show {
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(1);
+}

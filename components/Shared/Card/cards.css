@@ -1,0 +1,33 @@
+.statistic-card {
+    border-top: 0.69px solid #F3F4F6;
+    position: relative;
+    overflow: hidden;
+}
+
+.statistic-card::before {
+    @apply content-[''] absolute top-[-100%] left-0 right-0 w-full h-full bg-primary z-[-1] transition-all duration-500 isolation-auto rounded-xl opacity-0;
+}
+
+.statistic-card::after {
+    @apply content-[''] absolute bottom-0 left-0 right-0 w-full h-full z-[-1] transition-all duration-500 isolation-auto rounded-xl;
+    background: linear-gradient(180deg, #F0FDFA 0%, #FFFFFF 100%);
+}
+
+.statistic-card:hover::before {
+    @apply top-0 opacity-100;
+}
+
+.statistic-card:hover::after {
+    @apply bottom-0 opacity-0;
+}
+
+.statistic-card:hover img {
+    filter: var(--light-filter);
+}
+.statistic-card:hover .statistic-card-content span {
+    color: #fff !important;
+  }
+  
+  .statistic-card:hover .statistic-card-content p {
+    color: #FBFBFB !important;
+  }
